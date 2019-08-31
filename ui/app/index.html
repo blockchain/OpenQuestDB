@@ -1,0 +1,122 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~    ___                  _   ____  ____
+  ~   / _ \ _   _  ___  ___| |_|  _ \| __ )
+  ~  | | | | | | |/ _ \/ __| __| | | |  _ \
+  ~  | |_| | |_| |  __/\__ \ |_| |_| | |_) |
+  ~   \__\_\\__,_|\___||___/\__|____/|____/
+  ~
+  ~ Copyright (C) 2014-2019 Appsicle
+  ~
+  ~ This program is free software: you can redistribute it and/or  modify
+  ~ it under the terms of the GNU Affero General Public License, version 3,
+  ~ as published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTag -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>QuestDB - Console</title>
+
+    <link href="images/favicon@76x-8.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="images/favicon@16x-8.png" rel="icon" type="image/png">
+
+    <!-- build:css styles/qdb.css -->
+    <!-- bower:css -->
+    <link href="../bower_components/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../bower_components/animate.css/animate.css" rel="stylesheet">
+    <link href="../bower_components/selectize/dist/css/selectize.css" rel="stylesheet">
+    <link href="../bower_components/selectize/dist/css/selectize.bootstrap3.css" rel="stylesheet">
+    <link href="../bower_components/jquery-minicolors/jquery.minicolors.css" rel="stylesheet">
+    <!-- endbower -->
+    <!--suppress HtmlUnknownTarget -->
+    <link href="styles/main.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+        /*
+         Disable "back" button.
+         Some platforms use left to right swipe
+         to "go back". This interferes with scrolling grid from side to side
+         accidental swipe would clear state of javascript app, which is inconvenient.
+         User can still go back via browser's menu system.
+         */
+        history.pushState(null, null, 'index.html');
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, 'index.html');
+        });
+    </script>
+</head>
+
+<body class="mini-navbar pace-done">
+
+<div id="wrapper">
+
+    @@include('./include/nav.html')
+
+    <div class="gray-bg" id="page-wrapper">
+
+        @@include('./include/console.html')
+
+        @@include('./include/vis-container.html')
+
+        @@include('./include/import.html')
+
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> Appsicle Ltd. &copy; 2014-2017
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- build:js scripts/qdb.js -->
+<!-- bower:js -->
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+<script src="../bower_components/PACE/pace.min.js"></script>
+<script src="../bower_components/ace-builds/src-noconflict/ace.js"></script>
+<script src="../bower_components/ace-builds/src-noconflict/theme-merbivore_soft.js"></script>
+<script src="../bower_components/clipboard/dist/clipboard.min.js"></script>
+<script src="../bower_components/microplugin/src/microplugin.js"></script>
+<script src="../bower_components/sifter/sifter.js"></script>
+<script src="../bower_components/selectize/dist/js/selectize.js"></script>
+<script src="../bower_components/jquery-minicolors/jquery.minicolors.js"></script>
+<!-- endbower -->
+<script src="thirdparty/mode-questdb.js"></script>
+<script src="scripts/globals.js"></script>
+<script src="scripts/grid.js"></script>
+<script src="scripts/import.js"></script>
+<script src="scripts/import-detail.js"></script>
+<script src="scripts/query.js"></script>
+<script src="scripts/splitter.js"></script>
+<script src="scripts/console-controller.js"></script>
+<script src="scripts/import-controller.js"></script>
+<script src="thirdparty/macarons.js"></script>
+<script src="scripts/list-manager.js"></script>
+<script src="scripts/vis-query-form.js"></script>
+<script src="scripts/vis-series-form.js"></script>
+<script src="scripts/vis-axis-form.js"></script>
+<script src="scripts/vis-controller.js"></script>
+<script src="scripts/vis-builder.js"></script>
+<script src="scripts/main.js"></script>
+<!-- bower:js -->
+<script src="../bower_components/echarts/dist/echarts.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+</body>
+</html>

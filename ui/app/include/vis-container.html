@@ -1,0 +1,124 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~    ___                  _   ____  ____
+  ~   / _ \ _   _  ___  ___| |_|  _ \| __ )
+  ~  | | | | | | |/ _ \/ __| __| | | |  _ \
+  ~  | |_| | |_| |  __/\__ \ |_| |_| | |_) |
+  ~   \__\_\\__,_|\___||___/\__|____/|____/
+  ~
+  ~ Copyright (C) 2014-2019 Appsicle
+  ~
+  ~ This program is free software: you can redistribute it and/or  modify
+  ~ it under the terms of the GNU Affero General Public License, version 3,
+  ~ as published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<div class="row js-vis-panel">
+    <div class="col-lg-12">
+        <div class="row wrapper border-bottom white-bg page-heading" id="vis-menu">
+            <div class="col-lg-12">
+                <div class="section-title"><i class="fa fa-pie-chart"></i> Visualisation</div>
+                <div class="m-b-sm m-t-sm section-nav">
+                    <button class="btn btn-white btn-sm btn-icon" id="btnVisRefresh"><i
+                            class="fa fa-refresh"></i>Refresh
+                    </button>
+                    <button class="btn btn-white btn-sm btn-icon" id="btnVisFetch"><i
+                            class="fa fa-play-circle"></i>Fetch
+                    </button>
+                    <button class="btn btn-white btn-sm btn-icon" id="btnVisReload"><i
+                            class="fa fa-play-circle"></i>Reload
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="vis-canvas"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="splitter" id="vis-splitter"></div>
+            </div>
+        </div>
+
+        <div class="row ibox-content" id="vis-forms">
+            <div class="col-lg-12 v-fit">
+                <div class="config-tabs">
+                    <ul class="nav nav-tabs ">
+                        <li class="active">
+                            <a aria-expanded="false" data-toggle="tab" href="#vis-tab-queries"> Queries </a>
+                        </li>
+                        <li>
+                            <a aria-expanded="false" data-toggle="tab" href="#vis-tab-axis"> Axis </a>
+                        </li>
+                        <li class="">
+                            <a aria-expanded="false" data-toggle="tab" href="#vis-tab-series"> Series </a>
+                        </li>
+                        <li class="">
+                            <a aria-expanded="true" data-toggle="tab" href="#vis-general"> General </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane v-fit active" id="vis-tab-queries">
+                            <div class="row v-fit">
+                                <div class="col-lg-3 v-fit">
+                                    @@include('./vis-list.html', {
+                                    "list-title": "Query"
+                                    })
+                                </div>
+                                <div class="col-lg-9 v-fit">
+                                    @@include('./vis-query-form.html')
+                                    @@include('./vis-form-placeholder.html')
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane v-fit" id="vis-tab-axis">
+                            <div class="row v-fit">
+                                <div class="col-lg-3 v-fit">
+                                    @@include('./vis-list.html', {
+                                    "list-title": "Axis"
+                                    })
+                                </div>
+                                <div class="col-lg-9 v-fit">
+                                    @@include('./vis-axis-form.html')
+                                    @@include('./vis-form-placeholder.html')
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane v-fit" id="vis-tab-series">
+                            <div class="row v-fit">
+                                <div class="col-lg-3 v-fit">
+                                    @@include('./vis-list.html', {
+                                    "list-title": "Series"
+                                    })
+                                </div>
+                                <div class="col-lg-9 v-fit">
+                                    @@include('./vis-series-form.html')
+                                    @@include('./vis-form-placeholder.html')
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="vis-general">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    @@include('./vis-general.html')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+/*!******************************************************************************
+ *    ___                  _   ____  ____
+ *   / _ \ _   _  ___  ___| |_|  _ \| __ )
+ *  | | | | | | |/ _ \/ __| __| | | |  _ \
+ *  | |_| | |_| |  __/\__ \ |_| |_| | |_) |
+ *   \__\_\\__,_|\___||___/\__|____/|____/
+ *
+ * Copyright (C) 2014-2019 Appsicle
+ *
+ * This program is free software: you can redistribute it and/or  modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ ******************************************************************************/
+
+#grid {
+}
+
+.qg-header-row {
+  overflow: hidden;
+}
+
+.qg-header-row, .qg-r {
+  white-space: nowrap;
+}
+
+.qg-r {
+  border-bottom: 1px solid #e6e6e6;
+  position: absolute;
+}
+
+.qg-r:hover {
+  background-color: #f6f6f6;
+}
+
+.qg-r:focus {
+  outline: none;
+}
+
+.qg-r-active:hover {
+  background-color: #8ED0C2;
+  color: white;
+}
+
+.qg-r-active {
+  background-color: #6caea0;
+  color: white;
+}
+
+.qg-header {
+  display: inline-block;
+  padding: 5px 3px 7px;
+  font-weight: 700;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+.qg-header-l {
+  text-align: left;
+}
+
+.qg-viewport {
+  overflow: auto;
+}
+
+.qg-canvas {
+  position: relative;
+  overflow: hidden;
+}
+
+.qg-c {
+  display: inline-block;
+  padding: 4px 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+.qg-c:hover {
+  padding: 2px 1px;
+  border: 2px solid #afb7c7;
+}
+
+.qg-r-active > .qg-c:hover, .qg-c-active {
+  padding: 2px 1px;
+  border: 2px solid #366a5c;
+}
+
+.qg-r-active > .qg-c:hover {
+  padding: 2px 1px;
+  border: 2px solid #8d95a5;
+}
+
+#debug {
+  float: right;
+  width: 300px;
+  height: 300px;
+  background: white;
+  border: 1px solid red;
+}
