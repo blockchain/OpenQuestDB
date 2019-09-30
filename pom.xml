@@ -27,7 +27,7 @@
 
     <version>1.0</version>
     <groupId>org.questdb</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>open-questdb</artifactId>
     <packaging>pom</packaging>
 
     <name>parent</name>
@@ -46,6 +46,5 @@
     </build>
     <modules>
         <module>core</module>
-        <module>benchmarks</module>
     </modules>
 </project>

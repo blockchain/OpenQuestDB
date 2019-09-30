@@ -127,8 +127,8 @@ public class NetworkFacadeImpl implements NetworkFacade {
     }
 
     @Override
-    public boolean bindUdp(long fd, int port) {
-        return Net.bindUdp(fd, port);
+    public boolean bindUdp(long fd, int ipv4Address, int port) {
+        return Net.bindUdp(fd, ipv4Address, port);
     }
 
     @Override
