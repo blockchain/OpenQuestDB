@@ -81,6 +81,8 @@ public interface NetworkFacade {
 
     int parseIPv4(CharSequence ipv4Address);
 
+    int setMulticastTTL(long fd, int ttl);
+
     int setReusePort(long fd);
 
     int setTcpNoDelay(long fd, boolean noDelay);

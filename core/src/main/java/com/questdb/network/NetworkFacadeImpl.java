@@ -122,6 +122,11 @@ public class NetworkFacadeImpl implements NetworkFacade {
     }
 
     @Override
+    public int setMulticastTTL(long fd, int ttl) {
+        return Net.setMulticastTtl(fd, ttl);
+    }
+
+    @Override
     public long socketUdp() {
         return Net.socketUdp();
     }
