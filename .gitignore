@@ -3,3 +3,5 @@
 benchmarks/target
 core/target
 deploy*.bat
+core/cmake-build-debug
+*.iml

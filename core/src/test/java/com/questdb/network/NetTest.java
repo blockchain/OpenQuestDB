@@ -203,7 +203,7 @@ public class NetTest {
         bindSocket(socket);
         System.out.println(Net.setMulticastInterface(socket, Net.parseIPv4("192.168.1.156")));
         System.out.println(Net.setMulticastLoop(socket, true));
-        System.out.println(Net.setMulticastTtl(socket, 1));
+        System.out.println(Net.setMulticastTtl(socket, 2));
         System.out.println(Os.errno());
     }
 
